@@ -1,0 +1,15 @@
+C:\резюме\TestingWPF\TestingWPF\bin\Debug\TestingWPF.exe.config
+C:\резюме\TestingWPF\TestingWPF\bin\Debug\TestingWPF.exe
+C:\резюме\TestingWPF\TestingWPF\bin\Debug\TestingWPF.pdb
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF.csprojResolveAssemblyReference.cache
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\MainWindow.g.cs
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\App.g.cs
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF_MarkupCompile.cache
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF_MarkupCompile.lref
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\MainWindow.baml
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF.g.resources
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF.Properties.Resources.resources
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF.csproj.GenerateResource.Cache
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF.csproj.CoreCompileInputs.cache
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF.exe
+C:\резюме\TestingWPF\TestingWPF\obj\Debug\TestingWPF.pdb

@@ -1,0 +1,55 @@
+﻿<Window x:Name="window" x:Class="TestingWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestingWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1024"
+        Loaded="OnWindowLoad">
+    <Window.Resources>
+        <AlternationConverter x:Key="AlternationConverter"/>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="OpenCommandExecuted" CanExecute="OpenCommandCanExecute"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="SaveCommandExecuted" CanExecute="SaveCommandCanExecute"/>
+    </Window.CommandBindings>
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" Background="White" BorderBrush="Black">
+            <MenuItem FontSize="12" Header="_Файл">
+                <MenuItem Header="_Добавить случайные" MouseEnter="MouseEnterRandom" MouseLeave="MouseLeave" Click="FileRandomClick">
+                    <TextBox Name="RandomDotsToAdd" Text="10" Width="80"/>
+                </MenuItem>
+                <MenuItem Header="_Метод расчета" MouseEnter="MouseEnterMethod" MouseLeave="MouseLeave" Margin="0,0,0.4,0">
+                    <MenuItem Header="Метод _ближайшего соседа" Click="FileMethodNearestNeighbourClick"/>
+                    <MenuItem Header="Метод _полного перебора" Click="FileMethodBruteforceClick"/>
+
+                </MenuItem>
+                <MenuItem Header="_Кратчайший маршрут" MouseEnter="MouseEnterExecute" MouseLeave="MouseLeave" Click="FileExecuteClick"></MenuItem>
+                <MenuItem Command="ApplicationCommands.Open"/>
+                <MenuItem Command="ApplicationCommands.Save"/>
+                <Separator/>
+                <MenuItem Header="_Выход" MouseEnter="MouseEnterExit" MouseLeave="MouseLeave" Click="FileExitClick"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom" Background="Beige">
+            <StatusBarItem>
+                <TextBlock Name="statusBarText" FontSize="12" Text="Готово к выполнению. Нажмите F1 для вызова помощи."/>
+            </StatusBarItem>
+        </StatusBar>
+        <Grid Name="mainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+            <DataGrid Name="initialData" Grid.Column="0" Grid.Row="0" MouseEnter="MouseEnterInitialData" 
+                      MouseDoubleClick="MouseDoubleClickInitialData" MouseLeave="MouseLeave">
+            </DataGrid>
+            <DataGrid Name="results" Grid.Column="0" Grid.Row="1">
+            </DataGrid>
+        </Grid>
+    </DockPanel>
+</Window>
